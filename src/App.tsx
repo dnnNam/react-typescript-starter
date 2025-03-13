@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+function MyButton({ title }: { title: string }) {
+  return <button>{title}</button>;
+}
+
+interface MyButtonProps {
+  title: string;
+  disable: boolean;
+}
+
+function YourButton({ title, disable }: MyButtonProps) {
+  return <button disabled={disable}>{title}</button>;
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1> Welcom to my app</h1>
+      <MyButton title="I'm button" />
+      <YourButton title="hello world" disable={true} />
     </div>
   );
 }
