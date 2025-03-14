@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 function MyButton({ title }: { title: string }) {
@@ -14,6 +15,19 @@ function YourButton({ title, disable }: MyButtonProps) {
 }
 
 function App() {
+  // Infer the type as "boolean"
+  // const [enabled, setEnabled] = useState(false);
+  // Explicitly set the type to "boolean"
+  const [enabled, setEnabled] = useState<boolean>(false);
+  type RequestState =
+    | { status: "idle" }
+    | { status: "loading" }
+    | { status: "success"; data: any }
+    | { status: "error"; error: Error };
+  //you can group related state as an object and describe the different possibilities via object types:
+  const [requestState, setRequestState] = useState<RequestState>({
+    status: "idle",
+  });
   return (
     <div className="App">
       <h1> Welcom to my app</h1>
