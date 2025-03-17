@@ -14,24 +14,18 @@ function YourButton({ title, disable }: MyButtonProps) {
   return <button disabled={disable}>{title}</button>;
 }
 
-function App() {
-  // Infer the type as "boolean"
-  // const [enabled, setEnabled] = useState(false);
-  // Explicitly set the type to "boolean"
-  const [enabled, setEnabled] = useState<boolean>(false);
-  type RequestState =
-    | { status: "idle" }
-    | { status: "loading" }
-    | { status: "success"; data: any }
-    | { status: "error"; error: Error };
-  //you can group related state as an object and describe the different possibilities via object types:
-  const [requestState, setRequestState] = useState<RequestState>({
-    status: "idle",
-  });
+interface State {
+  count: number;
+}
 
+type CounterAction =
+  | { type: "reset" }
+  | { type: "setCount"; value: State["count"] };
+
+function App() {
   return (
     <div className="App">
-      <h1> Welcom to my app</h1>
+      {/* <h1> Welcom to my app</h1>
       <article>
         <h1>My First Component</h1>
         <ol>
@@ -41,7 +35,7 @@ function App() {
         </ol>
       </article>
       <MyButton title="I'm button" />
-      <YourButton title="hello world" disable={true} />
+      <YourButton title="hello world" disable={true} /> */}
     </div>
   );
 }
