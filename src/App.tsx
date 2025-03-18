@@ -22,6 +22,8 @@ type CounterAction =
   | { type: "reset" }
   | { type: "setCount"; value: State["count"] };
 
+const initialState: State = { count: 0 };
+
 function App() {
   return (
     <div className="App">
