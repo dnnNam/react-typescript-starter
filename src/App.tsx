@@ -27,17 +27,7 @@ const initialState: State = { count: 0 };
 function App() {
   return (
     <div className="App">
-      {/* <h1> Welcom to my app</h1>
-      <article>
-        <h1>My First Component</h1>
-        <ol>
-          <li>Components: UI Building Blocks</li>
-          <li>Defining a Component</li>
-          <li>Using a Component</li>
-        </ol>
-      </article>
-      <MyButton title="I'm button" />
-      <YourButton title="hello world" disable={true} /> */}
+      <h1> Welcom to my app</h1>
     </div>
   );
 }
