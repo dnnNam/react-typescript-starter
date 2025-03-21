@@ -1,3 +1,4 @@
+import { useReducer } from "react";
 import "./App.css";
 
 interface State {
@@ -22,9 +23,15 @@ function stateReducer(state: State, action: CounterAction): State {
 }
 
 function App() {
+  const [state, dispatch] = useReducer(stateReducer, initialState);
+  const addFive = () => dispatch({ type: "setCount", value: state.count + 5 });
+  const reset = () => dispatch({ type: "reset" });
   return (
     <div className="App">
-      <h1> Welcom to my app</h1>
+      <h1> Welcom to my Counter</h1>
+      <p>Count: {state.count}</p>
+      <button onClick={addFive}>add 5</button>
+      <button onClick={reset}>Reset</button>
     </div>
   );
 }
