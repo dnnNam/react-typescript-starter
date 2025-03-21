@@ -10,6 +10,17 @@ type CounterAction =
 
 const initialState: State = { count: 0 };
 
+function stateReducer(state: State, action: CounterAction): State {
+  switch (action.type) {
+    case "reset":
+      return initialState;
+    case "setCount":
+      return { ...state, count: action.value };
+    default:
+      throw new Error("Unkown action");
+  }
+}
+
 function App() {
   return (
     <div className="App">
