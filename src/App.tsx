@@ -18,11 +18,12 @@ function stateReducer(state: State, action: CounterAction): State {
     case "setCount":
       return { ...state, count: action.value };
     default:
-      throw new Error("Unkown action");
+      throw new Error("notdefine action");
   }
 }
 
 function App() {
+  // phai cap nhap lai state cho truong hop co nhieu hon 2 thuoc tinh
   const [state, dispatch] = useReducer(stateReducer, initialState);
   const addFive = () => dispatch({ type: "setCount", value: state.count + 5 });
   const reset = () => dispatch({ type: "reset" });
