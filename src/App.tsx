@@ -36,7 +36,7 @@ function App() {
       <button onClick={addFive}>add 5</button>
       <button onClick={addTen}> add 10</button>
       <button onClick={reset}>Reset</button>
-      <Greet />
+      <Greet name="hehe" />
     </div>
   );
 }
