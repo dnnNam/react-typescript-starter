@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import "./App.css";
+import { Greet } from "./components/Greet";
 
 interface State {
   count: number;
@@ -35,6 +36,7 @@ function App() {
       <button onClick={addFive}>add 5</button>
       <button onClick={addTen}> add 10</button>
       <button onClick={reset}>Reset</button>
+      <Greet />
     </div>
   );
 }
