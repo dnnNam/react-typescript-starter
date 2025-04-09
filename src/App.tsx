@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import "./App.css";
 import { Greet } from "./components/Greet";
 import { Person } from "./components/Person";
+import { PersonList } from "./components/PersonList";
 
 interface State {
   count: number;
@@ -35,6 +36,21 @@ function App() {
     first: "Bruce",
     last: "Wayne",
   };
+
+  const nameList = [
+    {
+      first: "Bruce",
+      last: "Wayne",
+    },
+    {
+      first: "Clark",
+      last: "Kent",
+    },
+    {
+      first: "Princess",
+      last: "Diana",
+    },
+  ];
   return (
     <div className="App">
       <h1> Welcom to my Counter</h1>
@@ -44,6 +60,7 @@ function App() {
       <button onClick={reset}>Reset</button>
       <Greet name="hehe" messageCount={20} isLoggedIn={false} />
       <Person name={personName} />
+      <PersonList names={nameList} />
     </div>
   );
 }
