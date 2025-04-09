@@ -3,6 +3,7 @@ import "./App.css";
 import { Greet } from "./components/Greet";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
+import { Status } from "./components/Status";
 
 interface State {
   count: number;
@@ -61,6 +62,8 @@ function App() {
       <Greet name="hehe" messageCount={20} isLoggedIn={false} />
       <Person name={personName} />
       <PersonList names={nameList} />
+
+      <Status status="loading" />
     </div>
   );
 }
