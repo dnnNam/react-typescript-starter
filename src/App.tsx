@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 import "./App.css";
 import { Greet } from "./components/Greet";
+import { Person } from "./components/Person";
 
 interface State {
   count: number;
@@ -29,6 +30,11 @@ function App() {
   const addFive = () => dispatch({ type: "setCount", value: state.count + 5 });
   const addTen = () => dispatch({ type: "setCount", value: state.count + 10 });
   const reset = () => dispatch({ type: "reset" });
+
+  const personName = {
+    first: "Bruce",
+    last: "Wayne",
+  };
   return (
     <div className="App">
       <h1> Welcom to my Counter</h1>
@@ -37,6 +43,7 @@ function App() {
       <button onClick={addTen}> add 10</button>
       <button onClick={reset}>Reset</button>
       <Greet name="hehe" messageCount={20} isLoggedIn={false} />
+      <Person name={personName} />
     </div>
   );
 }
