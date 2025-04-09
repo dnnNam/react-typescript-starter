@@ -5,6 +5,7 @@ import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
 import { Heading } from "./components/Heading";
+import { Oscar } from "./components/Oscar";
 
 interface State {
   count: number;
@@ -60,12 +61,15 @@ function App() {
       <button onClick={addFive}>add 5</button>
       <button onClick={addTen}> add 10</button>
       <button onClick={reset}>Reset</button>
-      <Greet name="hehe" messageCount={20} isLoggedIn={false} />
+      <Greet name="hehe" messageCount={10} isLoggedIn={false} />
       <Person name={personName} />
       <PersonList names={nameList} />
 
       <Status status="loading" />
       <Heading>Placeholder text</Heading>
+      <Oscar>
+        <Heading>Oscar goes to Leonardo Dicpario</Heading>
+      </Oscar>
     </div>
   );
 }
