@@ -73,8 +73,8 @@ function App() {
       </Oscar>
 
       <Button
-        handleClick={(event) => {
-          console.log("Button Clicked", event);
+        handleClick={(event, id) => {
+          console.log("Button Clicked", event, id);
         }}
       />
     </div>
