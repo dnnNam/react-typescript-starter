@@ -6,6 +6,7 @@ import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
 import { Heading } from "./components/Heading";
 import { Oscar } from "./components/Oscar";
+import { Button } from "./components/Button";
 
 interface State {
   count: number;
@@ -70,6 +71,12 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to Leonardo Dicpario</Heading>
       </Oscar>
+
+      <Button
+        handleClick={(event) => {
+          console.log("Button Clicked", event);
+        }}
+      />
     </div>
   );
 }
