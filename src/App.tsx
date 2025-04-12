@@ -69,9 +69,9 @@ function App() {
       <PersonList names={nameList} />
 
       <Status status="loading" />
-      <Heading>Placeholder text</Heading>
+      <Heading>Placeholder </Heading>
       <Oscar>
-        <Heading>Oscar goes to Leonardo Dicpario</Heading>
+        <Heading>Oscar goes to </Heading>
       </Oscar>
 
       <Button
