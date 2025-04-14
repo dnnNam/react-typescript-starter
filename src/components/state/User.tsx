@@ -7,6 +7,8 @@ type AuthUser = {
 
 export const User = () => {
   const [user, setUser] = useState<AuthUser>({} as AuthUser);
+  // {} as AuthUser cách ép kiểu assertion giúp cho typeScript hiểu AuthUser có email và name
+  // ở dưới không cần phải dùng optional nữa
   // phải định nghĩa object nếu không khi setUser typeScript sẽ báo lỗi
   const handleLogin = () => {
     setUser({
