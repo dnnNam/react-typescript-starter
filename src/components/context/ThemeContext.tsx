@@ -5,7 +5,7 @@ type ThemeContextProvicderProps = {
   children: React.ReactNode;
 };
 
-const ThemeContext = createContext(theme);
+export const ThemeContext = createContext(theme);
 
 export const ThemeContextProvider = ({
   children,
