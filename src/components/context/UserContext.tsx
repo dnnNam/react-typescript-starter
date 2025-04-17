@@ -10,14 +10,16 @@ type UserContextType = {
   setUser: React.Dispatch<React.SetStateAction<AuthUser | null>>;
 };
 
-type UserContextProviderProps = {
-  children: React.ReactNode;
-};
-
-export const UserContext = createContext<UserContextType | null>(null);
+export const UserContext = createContext<UserContextType | null>(
+  {} as UserContextType
+);
 
 // nếu user login là object còn user logout là null
-export const UserContextProvider = ({ children }: UserContextProviderProps) => {
+export const UserContextProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   const [user, setUser] = useState<AuthUser | null>(null);
   return (
     <UserContext.Provider value={{ user, setUser }}>

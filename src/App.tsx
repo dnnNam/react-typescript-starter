@@ -11,57 +11,59 @@ import { Input } from "./components/Input";
 import { Container } from "./components/Container";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { Box } from "./components/context/Box";
+import { UserContextProvider } from "./components/context/UserContext";
+import { User } from "./components/context/User";
 
-interface State {
-  count: number;
-}
+// interface State {
+//   count: number;
+// }
 
-type CounterAction =
-  | { type: "reset" }
-  | { type: "setCount"; value: State["count"] };
+// type CounterAction =
+//   | { type: "reset" }
+//   | { type: "setCount"; value: State["count"] };
 
-const initialState: State = { count: 0 };
+// const initialState: State = { count: 0 };
 
-function stateReducer(state: State, action: CounterAction): State {
-  switch (action.type) {
-    case "reset":
-      return initialState;
-    case "setCount":
-      return { ...state, count: action.value };
-    default:
-      throw new Error("notdefine action");
-  }
-}
+// function stateReducer(state: State, action: CounterAction): State {
+//   switch (action.type) {
+//     case "reset":
+//       return initialState;
+//     case "setCount":
+//       return { ...state, count: action.value };
+//     default:
+//       throw new Error("notdefine action");
+//   }
+// }
 
 function App() {
-  // phai cap nhap lai state cho truong hop co nhieu hon 2 thuoc tinh
-  const [state, dispatch] = useReducer(stateReducer, initialState);
-  const addFive = () => dispatch({ type: "setCount", value: state.count + 5 });
-  const addTen = () => dispatch({ type: "setCount", value: state.count + 10 });
-  const reset = () => dispatch({ type: "reset" });
+  // // phai cap nhap lai state cho truong hop co nhieu hon 2 thuoc tinh
+  // const [state, dispatch] = useReducer(stateReducer, initialState);
+  // const addFive = () => dispatch({ type: "setCount", value: state.count + 5 });
+  // const addTen = () => dispatch({ type: "setCount", value: state.count + 10 });
+  // const reset = () => dispatch({ type: "reset" });
 
-  const personName = {
-    first: "Bruce",
-    last: "Wayne",
-  };
+  // const personName = {
+  //   first: "Bruce",
+  //   last: "Wayne",
+  // };
 
-  const nameList = [
-    {
-      first: "Bruce",
-      last: "Wayne",
-    },
-    {
-      first: "Clark",
-      last: "Kent",
-    },
-    {
-      first: "Princess",
-      last: "Diana",
-    },
-  ];
+  // const nameList = [
+  //   {
+  //     first: "Bruce",
+  //     last: "Wayne",
+  //   },
+  //   {
+  //     first: "Clark",
+  //     last: "Kent",
+  //   },
+  //   {
+  //     first: "Princess",
+  //     last: "Diana",
+  //   },
+  // ];
   return (
     <div className="App">
-      <h1> Welcom to my Counter</h1>
+      {/* <h1> Welcom to my Counter</h1>
       <p>Count: {state.count}</p>
       <button onClick={addFive}>add 5</button>
       <button onClick={addTen}> add 10</button>
@@ -88,7 +90,11 @@ function App() {
 
       <ThemeContextProvider>
         <Box />
-      </ThemeContextProvider>
+      </ThemeContextProvider> */}
+
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
