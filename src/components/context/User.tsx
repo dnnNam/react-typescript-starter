@@ -6,8 +6,8 @@ export const User = () => {
   const handleLogin = () => {
     if (userContext) {
       userContext.setUser({
-        name: "Vishwas",
-        email: "vishwas@example.com",
+        name: "namne",
+        email: "namhehe@gmail.com",
       });
     }
   };
