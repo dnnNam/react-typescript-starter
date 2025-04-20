@@ -10,7 +10,7 @@ export const DomRef = () => {
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
-
+  // thuộc tính ref là đối tượng đặc biệt để tham chiếu trực tiếp đến DOM
   return (
     <div>
       <input type="text" ref={inputRef} />
