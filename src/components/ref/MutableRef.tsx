@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 export const MutableRef = () => {
   const [timer, setTimer] = useState(0);
   const intervalRef = useRef<number | null>(null);
-  // vì setInternal có thể trả về id kiểu số
+  // vì setInternal có thể trả về id kiểu số nên phải định nghĩa thêm number
   // thuộc tính current sẽ lưu giá trị của lần trước khi render
   const stopTimer = () => {
     if (intervalRef.current) window.clearInterval(intervalRef.current);
