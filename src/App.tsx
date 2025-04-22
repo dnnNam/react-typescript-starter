@@ -18,6 +18,7 @@ import { MutableRef } from "./components/ref/MutableRef";
 import { Counter } from "./components/class/Counter";
 import { Private } from "./components/auth/Private";
 import { Profile } from "./components/auth/Profile";
+import { List } from "./components/generics/List";
 
 // interface State {
 //   count: number;
@@ -106,7 +107,12 @@ function App() {
 
       {/* <Counter message="the count value is" /> */}
 
-      <Private isLoggedIn={true} component={Profile} />
+      {/* <Private isLoggedIn={true} component={Profile} /> */}
+
+      <List
+        items={["Batman", "Superman", "Wonder Woman"]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 type ListProps = {
-  items: string[];
+  items: string[]; // là 1 mảng các chuỗi
   onClick: (value: string) => void; // đầu vào giá trị string không trả ra
 };
 
