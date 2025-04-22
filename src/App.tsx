@@ -16,6 +16,8 @@ import { User } from "./components/context/User";
 import { DomRef } from "./components/ref/DomRef";
 import { MutableRef } from "./components/ref/MutableRef";
 import { Counter } from "./components/class/Counter";
+import { Private } from "./components/auth/Private";
+import { Profile } from "./components/auth/Profile";
 
 // interface State {
 //   count: number;
@@ -102,7 +104,9 @@ function App() {
       <DomRef />
       <MutableRef /> */}
 
-      <Counter message="the count value is" />
+      {/* <Counter message="the count value is" /> */}
+
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
