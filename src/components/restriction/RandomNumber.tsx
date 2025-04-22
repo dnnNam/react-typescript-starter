@@ -15,6 +15,7 @@ export const RandomNumber = ({
     <div>
       {value} {isPositive && "positive"} {isNegative && "negative"}{" "}
       {isZero && "zero"}
+      {/* hiển thị số và in trạng thái đó là gì positive negative or zero */}
     </div>
   );
 };
