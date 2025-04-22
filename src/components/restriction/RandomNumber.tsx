@@ -1,9 +1,26 @@
-type RandomNumberProps = {
+type RamdomNumberType = {
   value: number;
-  isPositive?: boolean;
-  isNegative?: boolean;
-  isZero?: boolean;
 };
+
+type PositiveNumber = RamdomNumberType & {
+  isPositive: boolean;
+  isNegative?: never;
+  isZero?: never;
+};
+
+type NegativeNumber = RamdomNumberType & {
+  isNegative: boolean;
+  isPositive?: never;
+  isZero?: never;
+};
+
+type ZeroNumber = RamdomNumberType & {
+  isZero: boolean;
+  isNegative?: never;
+  isPositive?: never;
+};
+
+type RandomNumberProps = PositiveNumber | NegativeNumber | ZeroNumber;
 
 export const RandomNumber = ({
   value,

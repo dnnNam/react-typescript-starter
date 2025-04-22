@@ -19,6 +19,7 @@ import { Counter } from "./components/class/Counter";
 import { Private } from "./components/auth/Private";
 import { Profile } from "./components/auth/Profile";
 import { List } from "./components/generics/List";
+import { RandomNumber } from "./components/restriction/RandomNumber";
 
 // interface State {
 //   count: number;
@@ -115,14 +116,16 @@ function App() {
       />
 
       <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
-      <List
+      {/* <List
         items={[
           { id: 1, first: "Bruce", last: "Wayce" },
           { id: 2, first: "Clark", last: "Kent" },
           { id: 3, first: "Princess", last: "Diana" },
         ]}
         onClick={(item) => console.log(item)}
-      />
+      /> */}
+
+      <RandomNumber value={10} isPositive={true} />
     </div>
   );
 }
