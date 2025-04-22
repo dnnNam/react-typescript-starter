@@ -15,6 +15,7 @@ import { UserContextProvider } from "./components/context/UserContext";
 import { User } from "./components/context/User";
 import { DomRef } from "./components/ref/DomRef";
 import { MutableRef } from "./components/ref/MutableRef";
+import { Counter } from "./components/class/Counter";
 
 // interface State {
 //   count: number;
@@ -97,9 +98,11 @@ function App() {
       {/* <UserContextProvider>
         <User />
       </UserContextProvider> */}
-
+      {/* 
       <DomRef />
-      <MutableRef />
+      <MutableRef /> */}
+
+      <Counter message="the count value is" />
     </div>
   );
 }
