@@ -133,7 +133,7 @@ function App() {
        */}
 
       <CustomButton variant="primary" onClick={() => console.log("clicked")}>
-        Primary Button
+        <div>Primary Button</div>
       </CustomButton>
     </div>
   );
