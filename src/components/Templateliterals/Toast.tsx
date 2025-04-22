@@ -6,11 +6,10 @@ type HorizontalPosition = "left" | "center" | "right";
 type VerticalPosition = "top" | "center" | "bottom";
 
 type ToastProps = {
-  position: Exclude<
-    `${HorizontalPosition}-${VerticalPosition}`,
-    "center-center"
-    // không muốn có vị trí là center center dùng exclude
-  >;
+  // không muốn có vị trí là center center dùng exclude
+  position:
+    | Exclude<`${HorizontalPosition}-${VerticalPosition}`, "center-center">
+    | "center";
 };
 
 export const Toast = ({ position }: ToastProps) => {
