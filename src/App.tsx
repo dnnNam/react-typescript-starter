@@ -143,7 +143,7 @@ function App() {
       <Text as="p" size="md">
         Paragraph
       </Text>
-      <Text as="label" size="sm" color="secondary">
+      <Text as="label" htmlFor="someId" size="sm" color="secondary">
         Label
       </Text>
     </div>
